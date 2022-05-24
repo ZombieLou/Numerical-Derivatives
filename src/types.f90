@@ -1,7 +1,7 @@
 !----------------------------------------------------------------------
 !Module: types
 !---------------------------------------------------------------------
-!! By: Rodrigo Navarro Perez
+!! By: Louis Andre
 !!
 !! Defines the integer parameters sp, dp and qp to
 !! be used as kinds to define real variables as single precision 
@@ -20,8 +20,7 @@
 !! use this module
 !---------------------------------------------------------------------
 module types
-! The iso_fortran_env is an intrinsic module that should already be
-! inside of your compiler
+
 use iso_fortran_env
 implicit none
 integer, parameter :: sp = REAL32 !< single precision kind

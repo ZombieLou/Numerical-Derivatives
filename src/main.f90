@@ -13,8 +13,6 @@ use read_write
 implicit none
 real(dp) :: x_zero
 
-! the dp inside of the real(dp) declaration was defined in the types module
-! and allows to use reals with double precision 
 call read_input(x_zero)
 call write_derivatives(x_zero)
 end program numerical_derivatives

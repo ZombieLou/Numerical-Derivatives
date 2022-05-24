@@ -18,11 +18,8 @@ module analytic_functions
 use types
 implicit none
 
-! The private statement restricts every function, parameter and variable
-! defined in this module to be visible only by this module
 private
-! Then we use the public statement to only make visible to other modules 
-! the few functions or subroutines that will be used by them
+
 public analytic_f, second_derivative_f
 
 contains
@@ -47,10 +44,9 @@ function analytic_f(x_zero) result(y_zero)
     implicit none
     real(dp), intent(in) :: x_zero
     real(dp) :: y_zero
-    ! This one is pretty easy. The function should return
-    ! x*sin(x)
+   
     y_zero = x_zero*sin(x_zero)
-    !y_zero = 0._dp
+    
 end function analytic_f
 
 !-----------------------------------------------------------------------
@@ -73,8 +69,7 @@ function second_derivative_f(x_zero) result(y_zero)
     implicit none
     real(dp), intent(in) :: x_zero
     real(dp) :: y_zero
-    ! You need to code the analytic expression for 
-    ! the second derivative of x*sin(x) and store it in y_zero
+    
     y_zero = 2*cos(x_zero) - x_zero*sin(x_zero)
     
 end function second_derivative_f
